@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profile: test
+  application:
+    name: aa
+server:
+  port: 1111
+---
+spring:
+  profile: dev
+  application:
+    name: bb
+server:
+  port: 1112   
