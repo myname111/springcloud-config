@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  application:
+    name: microservicecloud-dev
+  profiles: dev
+server:
+  port: 8201
+eureka:
+  client:  #客户端注册进eureka服务列表
+    service-url:
+      # defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka
+---
+spring:
+  application:
+    name: microservicecloud-test
+  profiles: test
+server:
+  port: 8202
+eureka:
+  client:  #客户端注册进eureka服务列表
+    service-url:
+      # defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7002.com:7002/eureka
